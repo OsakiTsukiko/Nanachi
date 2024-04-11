@@ -1,0 +1,112 @@
+.frame-cont {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    background: $color_dark_1;
+    -webkit-app-region: drag;
+    z-index: 500;
+}
+
+.fbtn {
+    width: fit-content;
+    height: 25px;
+    border-radius: 2.5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+    color: $color_dark_1;
+    -webkit-app-region: no-drag;
+    opacity: .7;
+    transition: .2s;
+    border: 0px;
+    outline: none;
+    &:hover {
+        opacity: 1;
+    }
+    &:disabled {
+        opacity: .3;
+    }
+}
+
+.quick-cmds {
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    width: fit-content;
+
+    .qc-add-btn {
+        background: $cmd_btn_1;
+    }
+
+    .qc-build-btn {
+        background: $cmd_btn_2;
+    }
+
+    .qc-run-btn {
+        background: $cmd_btn_3;
+    }
+
+    .qc-bar-btn { // bar = build and run
+        background: $cmd_btn_4;
+    }
+
+    .qc-bug-btn { // bar = build and run
+        background: $cmd_btn_5;
+    }
+
+    .qc-gh-btn {
+        background: $cmd_btn_6;
+    }
+
+    .qc-text-btn {
+        background: $cmd_btn_7;
+    }
+
+    .qc-textf-btn {
+        background: $cmd_btn_8;
+    }
+
+    .qc-last {
+        margin-right: 0px;
+    }
+}
+
+.title {
+    height: 35px;
+    flex: 1;
+    // background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono';
+    color: $color_txt_1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.btns {
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    width: fit-content;
+
+    .minimize {
+        background: $btn_color_3;
+    }
+
+    .maximize {
+        background: $btn_color_2;
+    }
+
+    .close {
+        background: $btn_color_1;
+    }
+
+    .b-last {
+        margin-right: 0px;
+    }
+}

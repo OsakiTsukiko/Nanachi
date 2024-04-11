@@ -1,0 +1,30 @@
+@import './scss/fonts';
+@import './scss/variables';
+@import './scss/frame';
+@import './scss/main_cont';
+@import './scss/prompt';
+
+html, body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    min-height: 0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: $color_dark_2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color_dark_1; 
+}

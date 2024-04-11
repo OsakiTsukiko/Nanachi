@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Nanachi</title>
+</head>
+<body>
+    <div class="frame-cont">
+        <div class="quick-cmds">
+            <button class="fbtn fdisbtn qc-add-btn" title="This button does nothing for now!"><i class="fas fa-file"></i></i></button>
+            <button class="fbtn fdisbtn qc-build-btn" onclick="buildCode()" title="Build"><i class="fas fa-cog"></i></button>
+            <button class="fbtn fdisbtn qc-run-btn" onclick="runBuild()" title="Run"><i class="fas fa-play"></i></button>
+            <button class="fbtn fdisbtn qc-bar-btn" onclick="BAR()" title="Build & Run"><i class="fas fa-shapes"></i></button>
+            <button class="fbtn fdisbtn qc-bug-btn" onclick="runTimer()" title="Timer (Build & Run)"><i class="fas fa-bug"></i></button>
+            <button class="fbtn fdisbtn qc-gh-btn" title="This button does nothing for now!"><i class="fab fa-github"></i></button>
+            <button class="fbtn fdisbtn qc-text-btn" onclick="toggleText()" title="Toggle IO Files"><i class="fas fa-align-left"></i></button>
+            <button class="fbtn fdisbtn qc-textf-btn" onclick="filenameIN()" title="Change Input File Name"><i class="fas fa-file-alt"></i>&nbsp;IN</button>
+            <button class="fbtn fdisbtn qc-textf-btn" onclick="filenameOUT()" title="Change Output File Name"><i class="fas fa-file-alt"></i>&nbsp;OUT</button>
+            <button class="fbtn fdisbtn qc-ref-btn qc-last" onclick="inAndOutRead()" title="Refresh IO"><i class="fas fa-redo-alt"></i></button>
+        </div>
+        <div class="title">github.com/OsakiTsukiko/Nanachi</div>
+        <div class="btns">
+            <button class="fbtn minimize" onclick="window_actions.doWin(event, 'minimize')"><i class="fas fa-minus"></i></button>
+            <button class="fbtn maximize" onclick="window_actions.doWin(event, 'maximize')"><i class="far fa-square"></i></button>
+            <button class="fbtn close b-last" onclick="window_actions.doWin(event, 'close')"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+    <div class="main-cont">
+        <div class="left"><div class="editor" id="editor"></div></div>
+        <div class="right" id="rightCont">
+            <div class="top">
+                <div class="filename" id="filename_1">FILE 1</div>
+                <div class="edCont"><div class="editor" id="topEditor"></div></div>
+            </div>
+            <div class="bottom">
+                <div class="filename" id="filename_2">FILE 2</div>
+                <div class="edCont"><div class="editor" id="bottomEditor"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="prompt-cont" id="prompt-cont">
+        <div class="prompt">
+            <div class="prompt-title" id="prompt-title">Enter File Name</div>
+            <div class="prompt-input-cont">
+                <input id="prompt-input" type="text" placeholder="file.ext" spellcheck="false">
+            </div>
+            <div class="prompt-enter">
+                <button onclick="returnPrompt()" id="prompt-enter">Enter</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/ace/ace.js"></script>
+    <script type="text/javascript" src="./js/ace/ext-language_tools.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

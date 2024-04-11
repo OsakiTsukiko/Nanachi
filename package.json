@@ -1,0 +1,35 @@
+{
+  "name": "nanachi",
+  "version": "0.0.6",
+  "description": "Toy CPP IDE",
+  "main": "main.js",
+  "scripts": {
+    "electron": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "OsakiTsukiko <osakitsukiko.mail@gmail.com>",
+  "license": "MIT",
+  "build": {
+    "appId": "com.osaki.nanachi",
+    "productName": "Nanachi",
+    "directories": {
+      "output": "build/out"
+    },
+    "linux": {
+      "target": "appImage"
+    },
+    "appImage": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsakiTsukiko/Nanachi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OsakiTsukiko/Nanachi/issues"
+  },
+  "homepage": "https://github.com/OsakiTsukiko/Nanachi",
+  "devDependencies": {
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5"
+  }
+}
